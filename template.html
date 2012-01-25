@@ -3,28 +3,61 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
-    <title>My Blog | __TITLE__</title>
+    <title>Matt Finkel | __TITLE__</title>
     <link rel="icon" type="image/ico" href="" />
 
     <style type="text/css">
+      body {
+        font-family:Helvetica;
+        font-size:large;
+        color:white;
+        background-color:black;
+        margin-top:50px;
+      }
+      a {
+        color:white;
+      }
+      a:hover {
+        color:#FF4422;
+        text-decoration:none;
+      }
+      img {
+        border:0px none;
+      }
+      #qr_wrapper {
+        position:fixed;
+        left:30px;
+        top:30px;
+      }
       #content_wrapper {
+        position:relative;
         width:700px;
         margin:0 auto;
       }
-      #header {
+      .header {
         font-weight:bold;
         font-size:48px;
+      }
+      .time_link {
+        text-decoration:none;
+        font-size:small;
+        padding-left:5px;
       }
     </style>
 
   </head>
   <body>
+
+    <div id="qr_wrapper">
+        <img src="../images/qr.png" alt="QR" />
+    </div>
+
     <div id="content_wrapper">
       <p>
-        <a href="/">back</a>
+        <a href="http://mfinkel.net">back</a>
       </p>
 
-      <span id="header">__TITLE__</span>
+      <span class="header">__TITLE__</span>
 
       <br />
 
@@ -38,7 +71,17 @@ __TEXT__
 
     <script type="text/javascript">
       //<![CDATA[
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17597788-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
       //]]>
     </script>
+
   </body>
 </html>
