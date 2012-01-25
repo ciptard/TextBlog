@@ -1,0 +1,7 @@
+A simple blog template system by Matt Finkel (mfinkel.net)
+
+To use, put blog.php, template.html and .htaccess in a directory named "blog."  Modify .htaccess if you use a different diretory name.
+
+Blog posts are added by creating text files in the blog directory with the filename format YYYYMMDD.txt.  The first line in these files is the post title.  Each newline means a new paragraph.  Empty lines are ignored.
+
+Website visitors view the blog post by entering a URL in the style www.website.com/blog/YYYYMMDD
