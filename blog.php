@@ -13,7 +13,7 @@
     }
 
     $title = $file[0];
-    $date = substr($post, 4, 2) . '.' . substr($post, 6, 2) . '.' . substr($post, 0, 4);
+    $date = substr($post, 6, 2) . ' ' . substr(date('F', mktime(0, 0, 0, substr($post, 4, 2))), 0, 3) . ' ' . substr($post, 0, 4);;
   }
   else {
     $title = 'All Posts:';
@@ -43,11 +43,13 @@
 
       $previousYear = substr($key, 0, 4);
     }
+
+    $date = '';
   }
 
   $pageHtml = file_get_contents('template.html');
   $pageHtml = str_replace('__TITLE__', $title, $pageHtml);
-  $pageHtml = str_replace('__DATE__', '', $pageHtml);
+  $pageHtml = str_replace('__DATE__', $date, $pageHtml);
   $pageHtml = str_replace('__TEXT__', $text, $pageHtml);
 
   echo $pageHtml;
