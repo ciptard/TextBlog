@@ -1,7 +1,7 @@
-A simple blog template system by Matt Finkel (mfinkel.net)
+TextBlog is a simple blog template system.
 
-To use, put blog.php, template.html and .htaccess in a directory named "blog"
+To use, create a directory named "blog" inside your website directory with the files blog.php, template.html and .htaccess in the blog directory.
 
 Blog posts are added by creating text files in the blog directory with the filename format YYYYMMDD.txt.  The first line in these files is the post title.  Each newline means a new paragraph.  Empty lines are ignored.
 
-Website visitors view the blog post by entering a URL in the style www.website.com/blog/YYYYMMDD
+Website visitors view the blog post by entering a URL in the style example.org/blog/YYYYMMDD
